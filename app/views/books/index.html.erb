@@ -40,7 +40,7 @@
         <td><%= link_to book.body, book_path(book) %></td>
         <td> <%= link_to "show",book_path(book.id) %> </td>
         <td> <%= link_to "edit",edit_book_path(book.id) %> </td>
-        <td><a data-confirm="Are you sure?" class="destroy_281722" rel="nofollow" data-method="delete" href="/books/281722">Destroy</a></td>
+        <td> <%= link_to "Destroy",book_path(book),method: :delete, data: { confirm: "Are you sure?" } %> </td>
          <% end %>
       </tr>
 
