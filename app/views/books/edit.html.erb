@@ -1,5 +1,13 @@
 <body>
     <h1>Editing Book</h1>
+
+<% if @book.errors.any? %>
+  <%= @book.errors.count %>件のエラーが発生しました
+  <% @book.errors.full_messages.each do |message| %>
+    <%= message %>
+  <% end %>
+<% end %>
+
 <%= form_with model:@book, local: true do |f| %>
 <form class="edit_book" id="edit_book_281758" action="/books/281758" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="16oLUqicFfXDKaubLuon7m+++RXuuBL3VeJvrUehXJlMvg3sWmbbTonCZcvuF6uIXlSbYT/uqgRhP89GiXysJQ==">
 
