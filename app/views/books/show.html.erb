@@ -1,2 +1,29 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<html><head>
+
+
+
+
+    <link rel="stylesheet" media="all" href="/assets/application-d12397cbc3a266ce5a99f7b588223090c55ca04a439953bb5f9304395de93fc3.css" data-turbolinks-track="reload">
+    <script src="/assets/application-4e370d3723b6f204426a9414077d365ea07814cce5619ae24fb7e581988f19ed.js" data-turbolinks-track="reload"></script>
+  <title>WebCampBackendNew</title><meta name="csrf-param" content="authenticity_token"><meta name="csrf-token" content="/2sFhxGNHJ0BGK7mkdMBkcH5BPE6h/Ao7HSUGaUBir+SOzIQIb/sT405iHRO986IjVx8Fp/LvgGdE3aJN2jKEQ=="></head>
+
+  <body>
+    <p id="notice"></p>
+
+<p>
+  <strong><%= @book.title %></strong>
+
+</p>
+
+<p>
+  <strong><%= @book.body %></strong></strong>
+
+</p>
+
+
+ <td> <%= link_to "edit",edit_book_path(@book.id) %> </td>
+<a class="back" href="/books">Back</a>
+
+
+</body></html>
+
