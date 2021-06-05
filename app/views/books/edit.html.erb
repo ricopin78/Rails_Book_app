@@ -9,7 +9,6 @@
 <% end %>
 
 <%= form_with model:@book, local: true do |f| %>
-<form class="edit_book" id="edit_book_281758" action="/books/281758" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="16oLUqicFfXDKaubLuon7m+++RXuuBL3VeJvrUehXJlMvg3sWmbbTonCZcvuF6uIXlSbYT/uqgRhP89GiXysJQ==">
 
   <div class="field">
     <label for="book_title">Title</label>
@@ -24,7 +23,6 @@
 
   <div class="actions">
      <%= f.submit 'Update Book' %>
-</form>
 
 <td> <%= link_to "show",book_path(@book.id) %> </td>
 <td> <%= link_to "back",book_path(@book) %> </td>

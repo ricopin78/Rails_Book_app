@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  protect_from_forgery :except => [:create]
+  # protect_from_forgery :except => [:create]
 
   def top
   end
@@ -17,9 +17,9 @@ class BooksController < ApplicationController
   end
 
   def create
-    @book = Book.new(book_params)
-    @book.save
-    redirect_to book_path(book)
+    book = Book.new(book_params)
+    book.save
+    redirect_to books_path
   end
 
 
@@ -30,7 +30,7 @@ class BooksController < ApplicationController
   def update
     @book = Book.find(params[:id])
     if @book.update(book_params)
-    redirect_to book_path(book)
+    redirect_to book_path(@book)
     else
     render :edit
     end
@@ -46,7 +46,7 @@ class BooksController < ApplicationController
 
   private
   def book_params
-    params.require(:book).permit(:title,:body)
+    params.permit(:title,:body)
   end
 
 end
